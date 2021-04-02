@@ -11,3 +11,15 @@ async function fetchAnimation(idEl,jsonFile) {
     };
     lottie.loadAnimation(params);
 }
+
+function fetchAnim(idEl,animationData) {
+    document.getElementById(idEl).innerHTML="";
+    var params = {
+        container: document.getElementById(idEl),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: animationData
+    };
+    lottie.loadAnimation(params);
+}
